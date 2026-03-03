@@ -1,7 +1,7 @@
 services:
   db:
     image: mysql:${MYSQL_VERSION}
-    container_name: app-mysql-db
+    container_name: mysql-container-db
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
@@ -16,7 +16,6 @@ services:
     command:
       - --character-set-server=utf8mb4
       - --collation-server=utf8mb4_unicode_ci
-      - --default-authentication-plugin=caching_sha2_password
     networks:
       - backend-network
     restart: unless-stopped
@@ -24,7 +23,7 @@ services:
       test:
         [
           "CMD-SHELL",
-          "mysqladmin ping -h localhost -u root -p$$MYSQL_ROOT_PASSWORD",
+          "mysql -h localhost -u root -p$$MYSQL_ROOT_PASSWORD -e 'SELECT 1' || exit 1",
         ]
       interval: 10s
       timeout: 5s
@@ -34,7 +33,7 @@ services:
       resources:
         limits:
           cpus: "1.0"
-          memory: 10G
+          memory: 10G      # Ajuste conforme necessidade
         reservations:
           cpus: "0.25"
           memory: 256M
