@@ -1,6 +1,7 @@
 <div align="center">
 
 # MySQL Server — Container Guide
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/Cardosofiles/mysql-container-db?utm_source=oss&utm_medium=github&utm_campaign=Cardosofiles%2Fmysql-container-db&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
 
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://hub.docker.com/_/mysql)
 [![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://docs.docker.com/compose/)
