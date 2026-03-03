@@ -211,7 +211,7 @@ mysql-server-db/
 | **Rede**           | `app-backend-network`    |
 | **Volume**         | `app-mysql-data`         |
 | **CPU limit**      | `1.0 vCPU`               |
-| **Memory limit**   | `1 GB`                   |
+| **Memory limit**   | `10 GB`                   |
 | **Restart policy** | `unless-stopped`         |
 
 ---
